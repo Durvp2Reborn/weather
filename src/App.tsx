@@ -1,12 +1,37 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    useEffect(() => {
+        fetch("https://api.geoapify.com/v1/geocode/search?text=${searchedValue}&lang=en&limit=1&type=city&filter=countrycode:us&format=json&apiKey=b8568cb9afc64fad861a69edbddb2658"+searchTerm+"+in:login")
+            .then((response) => response.json())
+            .then((data) => {
+                if(data.items != null)  setUssr(data.items);
+                console.log(data);
+            })
+            .catch((error) => console.log(error));
+    }, [searchTerm]);
+    etch("https://api.geoapify.com/v1/geocode/search?text=${searchedValue}&lang=en&limit=1&type=city&filter=countrycode:us&format=json&apiKey=b8568cb9afc64fad861a69edbddb2658"+searchTerm+"+in:login")
+        .then((response) => response.json())
+        .then((data) => {
+            if(data.items != null)  setUssr(data.items);
+            console.log(data);
+        })
+        .catch((error) => console.log(error));
+}, [searchTerm]);
+etch("https://api.geoapify.com/v1/geocode/search?text=${searchedValue}&lang=en&limit=1&type=city&filter=countrycode:us&format=json&apiKey=b8568cb9afc64fad861a69edbddb2658"+searchTerm+"+in:login")
+    .then((response) => response.json())
+    .then((data) => {
+        if(data.items != null)  setUssr(data.items);
+        console.log(data);
+    })
+    .catch((error) => console.log(error));
+}, [searchTerm]);
 
-  return (
+
+    return(
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
