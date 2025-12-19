@@ -5,7 +5,7 @@ import { useAutoComplete } from "./hooks.tsx";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState<string>('');
-    const results = useAutoComplete(searchTerm); // Assuming results is an array of strings
+    const results = useAutoComplete(searchTerm);
 
     return (
         <div id="container">
@@ -21,9 +21,10 @@ function App() {
                         <li key={i} id="bullets">
                             <button
                                 id="results"
-                                onClick={() => setSearchTerm(result)} // Use result directly if it's a string
+                                onClick={() => setSearchTerm(result)}
                             >
-                                {result} {/* Display the result string */}
+                                {result} {}
+
                             </button>
                         </li>
                     ))}

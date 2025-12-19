@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-// Hook to fetch weather based on latitude and longitude
+
 export function useWeather(lat?: number, lon?: number) {
     const [weather, setWeather] = useState<{ lat: number, lon: number }| null>(null);
 
@@ -14,7 +14,6 @@ export function useWeather(lat?: number, lon?: number) {
 
 }
 
-// Hook to get coordinates based on a search term
 export function useLocation(searchTerm: string) {
     const [coords, setCoords] =  useState<{ lat: number; lon: number } | null>( null );
     useEffect(()=> {
@@ -32,7 +31,7 @@ export function useLocation(searchTerm: string) {
     return coords;
 }
 
-// Enhancing auto-complete functionality for search suggestions
+
 export function useAutoComplete(searchTerm: string) {
     const [results, setResults]= useState<string[]>([]);
     useEffect(()=> {if (searchTerm.length < 2) return;
