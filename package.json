@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint ../../../Desktop/weather project/weather-master/weather-master",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "styled-components": "^6.1.19"
   },
+  "homepage": "https://{github-username}.github.io/{github-repository}",
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
@@ -26,6 +28,5 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
-  },
-"homepage": "https:Durvp2Reborn.github.io/weather"
+  }
 }
