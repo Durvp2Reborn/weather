@@ -14,7 +14,7 @@
     "react-dom": "^19.2.0",
     "styled-components": "^6.1.19"
   },
-  "homepage": "https://{github-username}.github.io/{github-repository}",
+  "homepage": "https://{durvp2reborn}.github.io/{weather}",
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
